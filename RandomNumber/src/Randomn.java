@@ -41,9 +41,12 @@ public class Randomn {
 		
 		int number=r.nextInt(100);	
 		int i=1;
-		System.out.println(number+1);
+		//System.out.println(number+1);
 		ans(i,number+1);
 		sc.close();//close scanne class
 	}
 	
 }
+
+
+//sunath abeysekara
