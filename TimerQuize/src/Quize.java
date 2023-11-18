@@ -54,10 +54,7 @@ public class Quize implements ActionListener{
 			}
 		}
 		
-	});
-	
-	
-	
+	});	
 	JTextField number_right=new JTextField();
 	JTextField percentage=new JTextField();
 	
@@ -89,7 +86,7 @@ public class Quize implements ActionListener{
 		btnA.setFont(new Font("MV Boli",Font.BOLD,35));
 		btnA.setFocusable(false);
 		btnA.addActionListener(this);
-		btnB.setText("A");
+		btnA.setText("A");
 		
 		btnB.setBounds(0,200,100,100);
 		btnB.setFont(new Font("MV Boli",Font.BOLD,35));
