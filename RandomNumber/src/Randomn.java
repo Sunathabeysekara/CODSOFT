@@ -1,4 +1,3 @@
-import java.math.*;
 import java.util.Random;
 import java.util.Scanner;
 public class Randomn {
@@ -41,7 +40,7 @@ public class Randomn {
 		
 		int number=r.nextInt(100);	
 		int i=1;
-		//System.out.println(number+1);
+		//System.out.println(number+1);//to get the selected random number
 		ans(i,number+1);
 		sc.close();//close scanne class
 	}
