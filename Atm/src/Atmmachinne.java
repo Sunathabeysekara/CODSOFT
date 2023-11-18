@@ -1,8 +1,7 @@
-import javax.swing.JFrame;
+import javax.swing.*;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
-import java.awt.Graphics;
 import java.util.Scanner;
 
 public class Atmmachinne extends JFrame{
@@ -44,6 +43,7 @@ public class Atmmachinne extends JFrame{
 	
 	frame.setTitle(null);
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setLocationRelativeTo(null);
 	setLocationRelativeTo(null);
 	frame.setSize(550,250);
 	frame.setLayout(null);
