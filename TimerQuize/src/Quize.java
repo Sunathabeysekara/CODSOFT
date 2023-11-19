@@ -4,22 +4,22 @@ import javax.swing.*;
 public class Quize implements ActionListener{
 
 	//questions creating sample 	questions
-	String[] questions= {"Press A for answer ?.",
-						"Press B for answer ?.",
-						"Press c for answer ?.",
-						"Press D for answer ?.",
-						"Press B for answer ?."};
+	String[] questions= {"What is the largest ocean ?.",
+						"Who painted Monalisa ?.",
+						"Which chess piece diagonaly move ?.",
+						"What is national flower of india ?.",
+						"Highest populated country ?."};
 	
 	//answers for each questions sample answers
-	String[][] options = {{"Answer A","Answer B","Answer c","Answer D"},
-							{"Answer A","Answer B","Answer c","Answer D"},
-							{"Answer A","Answer B","Answer c","Answer D"},
-							{"Answer A","Answer B","Answer c","Answer D"},
-							{"Answer A","Answer B","Answer c","Answer D"},
+	String[][] options = {{"Atlantic Ocean","Antarctic Ocean","Pacific Ocean","Indian Ocean"},
+							{"Picasso","Salvador Dali","Mr.Bean","Leonardo Da Vinci"},
+							{"King","Rook","Bishop","Knight"},
+							{"Lotus","Sunflower","Rose","Daisey"},
+							{"USA","India","China","Australia"},
 						  };
 	
 	//answers from answers correct answer set
-	char[] answers= {'A','B','C','D','B'};
+	char[] answers= {'C','D','C','A','C'};
 	
 	char guesses;
 	char answer;
@@ -77,7 +77,7 @@ public class Quize implements ActionListener{
 		
 		textarea.setBounds(0,0,650,50);
 		textarea.setBackground(new Color(25,25,25));
-		textarea.setForeground(new Color(25,255,0));
+		textarea.setForeground(new Color(0,255,0));
 		textarea.setFont(new Font("Ink Free",Font.BOLD,22));
 		textarea.setBorder(BorderFactory.createBevelBorder(1));
 		textarea.setEditable(false);
@@ -153,7 +153,7 @@ public class Quize implements ActionListener{
 		number_right.setEditable(false);
 		
 		
-		percentage.setBounds(225,325,200,100);
+		percentage.setBounds(200,205,200,100);
 		percentage.setBackground(new Color(25,25,25));
 		percentage.setForeground(new Color(25,225,0));
 		percentage.setFont(new Font("Ink Free",Font.BOLD,50));
@@ -163,8 +163,8 @@ public class Quize implements ActionListener{
 		
 		
 		
-		frame.add(number_right);
-		frame.add(percentage);
+		//frame.add(number_right);
+		//frame.add(percentage);
 		frame.add(time_label);
 		frame.add(seconds_left);
 		frame.add(andwer_labelA);
@@ -186,7 +186,6 @@ public class Quize implements ActionListener{
 		if(index>=total_qeusttions) {
 			results();
 		}else {
-			textfield.setText("Question "+(index+1));
 			textarea.setText(questions[index]);
 			andwer_labelA.setText(options[index][0]);
 			andwer_labelB.setText(options[index][1]);
@@ -263,10 +262,10 @@ public class Quize implements ActionListener{
 				answer =' ';
 				seconds=10;
 				seconds_left.setText(String.valueOf(seconds));
-				btnA.setEnabled(false);
-				btnB.setEnabled(false);
-				btnC.setEnabled(false);
-				btnD.setEnabled(false);
+				btnA.setEnabled(true);
+				btnB.setEnabled(true);
+				btnC.setEnabled(true);
+				btnD.setEnabled(true);
 				index++;
 				nextQuestion();
 			}
